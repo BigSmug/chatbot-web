@@ -115,7 +115,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -31px;
+  margin-left: -42px;
   margin-bottom: 1px;
   margin-top: 1px;
   cursor: pointer;
@@ -171,7 +171,7 @@ textarea {
   animation: higher 1.25s ease forwards;
 }
 .arrowout {
-  animation: fadeoutUPp 0.15s ease-out forwards;
+  animation: fadeoutUPp 0.15s linear forwards;
 }
 @keyframes fadeoutUPp {
   from {
@@ -228,6 +228,7 @@ textarea {
     height: 28px;
   }
   to {
+    width: 100vw;
     height: 95vh;
     max-height: 95vh;
   }
@@ -243,7 +244,7 @@ textarea {
 
 @keyframes widerInput {
   to {
-    width: 97vw;
+    width: 100vw;
     bottom: 10px;
     margin-right: 10px;
   }
@@ -318,4 +319,5 @@ body {
   min-height:100vh;
   margin:0;
   background:white;
+  overflow: hidden;
 }
