@@ -51,7 +51,7 @@ h1 span{
 
 h1 {
   position: absolute;
-  top: 33%;
+  bottom: 40px;
   font-family: "Playwrite GB S";
   font-size: 4rem;
   width: 100%;
@@ -134,7 +134,6 @@ textarea {
 }
 .grow-space {
   transition: all 1s ease;
-  background-color: lightgrey; /* Optional: add a background color for visibility */
   height: 500px;
   width: 100%;
   min-height: 500px;
