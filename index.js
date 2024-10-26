@@ -242,6 +242,7 @@ function fetchMessages(conversationId, key) {
         clearTimeout(timeoutId);
 
         typewriter(data);
+        previousData = null;
       } else {
         console.log("No changes detected in messages.");
         timeoutId = setTimeout(() => fetchMessages(conversationId, key), 2000);
