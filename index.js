@@ -236,7 +236,7 @@ function fetchMessages(conversationId, key) {
       if (previousData == null) {
         previousData = data;
       }
-      if (JSON.stringify(data) !== JSON.stringify(previousData)) {
+      if (data !== previousData) {
         console.log("Messages have changed:", data);
         previousData = data;
         clearTimeout(timeoutId);
