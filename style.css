@@ -62,10 +62,11 @@ textarea {
 }
 @media (max-width: 430px) {
   .input-area {
-    width: 100vw !important;
+    width: 97vw !important;
   }
 }
 .main-container {
+  max-height: 100dvh;
   flex-direction: column;
   display: flex;
   align-items: center;
@@ -112,6 +113,7 @@ textarea {
   }
 }
 .squircle {
+  position: absolute;
   padding: 3.5px 2px;
   width: 28px;
   height: 28px;
@@ -120,11 +122,9 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -42px;
-  margin-bottom: 1px;
-  margin-top: 1px;
   cursor: pointer;
   transition: transform 0.5s;
+  right: 5.6px;
 }
 .chatarea {
   overflow: auto;
@@ -233,9 +233,9 @@ textarea {
     height: 28px;
   }
   to {
-    width: 100vw;
-    height: 95vh;
-    max-height: 95vh;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
   }
 }
 @keyframes widen {
@@ -321,7 +321,7 @@ textarea {
 body {
   display:grid;
   place-content:center;
-  min-height:100vh;
+  min-height:100dvh;
   margin:0;
   background:white;
   overflow: hidden;
