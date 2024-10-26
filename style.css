@@ -1,52 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap");
 * {
   font-family: Lato;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-h1 span{
+h1 span {
   --c1: #2e88c7;
   --c2: #9ccce8;
-  
+
   --_p: 93% 83.5% at;
-  --_g1: radial-gradient(var(--_p) bottom,var(--c1) 79.5%,#0000 80%) no-repeat;
-  --_g2: radial-gradient(var(--_p) top   ,#0000 79.5%,var(--c1) 80%) no-repeat;
-  --_g3: radial-gradient(var(--_p) bottom,var(--c2) 79.5%,#0000 80%) no-repeat;
-  --_g4: radial-gradient(var(--_p) top   ,#0000 79.5%,var(--c2) 80%) no-repeat;
-  background: 
-    var(--_g1),var(--_g2),var(--_g1),var(--_g2),
-    var(--_g3),var(--_g4),var(--_g3),var(--_g4);
+  --_g1: radial-gradient(var(--_p) bottom, var(--c1) 79.5%, #0000 80%) no-repeat;
+  --_g2: radial-gradient(var(--_p) top, #0000 79.5%, var(--c1) 80%) no-repeat;
+  --_g3: radial-gradient(var(--_p) bottom, var(--c2) 79.5%, #0000 80%) no-repeat;
+  --_g4: radial-gradient(var(--_p) top, #0000 79.5%, var(--c2) 80%) no-repeat;
+  background: var(--_g1), var(--_g2), var(--_g1), var(--_g2), var(--_g3),
+    var(--_g4), var(--_g3), var(--_g4);
   -webkit-background-clip: text;
-          background-clip: text;
+  background-clip: text;
   color: #0003;
   -webkit-box-decoration-break: clone;
-          box-decoration-break: clone;
-  animation: 
-    s 2s infinite alternate,
-    m 3s infinite linear;
+  box-decoration-break: clone;
+  animation: s 2s infinite alternate, m 3s infinite linear;
 }
 @keyframes m {
-  0% {background-position:
-    -200% 100%,-100% 100%,  0% 100%,100% 100%,
-       0% 100%, 100% 100%,200% 100%,300% 100%}
-  100%{background-position:   
-        0% 100%, 100% 100%,200% 100%,300% 100%,
-     -200% 100%,-100% 100%,  0% 100%,100% 100%}
+  0% {
+    background-position: -200% 100%, -100% 100%, 0% 100%, 100% 100%, 0% 100%,
+      100% 100%, 200% 100%, 300% 100%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%, 300% 100%, -200% 100%,
+      -100% 100%, 0% 100%, 100% 100%;
+  }
 }
-@keyframes s{
-  0%  {background-size:
-        50.5% 60%, 50.5% 60%, 50.5% 60%, 50.5% 60%,
-        50.5% 90%, 50.5% 90%, 50.5% 90%, 50.5% 90%}
-  33% {background-size: 
-        50.5% 70%, 50.5% 70%, 50.5% 70%, 50.5% 70%,
-        50.5% 75%, 50.5% 75%, 50.5% 75%, 50.5% 75%}
-  66% {background-size: 
-        50.5% 55%, 50.5% 55%, 50.5% 55%, 50.5% 55%,
-        50.5% 80%, 50.5% 80%, 50.5% 80%, 50.5% 80%}
-  100%{background-size: 
-        50.5% 90%, 50.5% 90%, 50.5% 90%, 50.5% 90%,
-        50.5% 95%, 50.5% 95%, 50.5% 95%, 50.5% 95%}
+@keyframes s {
+  0% {
+    background-size: 50.5% 60%, 50.5% 60%, 50.5% 60%, 50.5% 60%, 50.5% 90%,
+      50.5% 90%, 50.5% 90%, 50.5% 90%;
+  }
+  33% {
+    background-size: 50.5% 70%, 50.5% 70%, 50.5% 70%, 50.5% 70%, 50.5% 75%,
+      50.5% 75%, 50.5% 75%, 50.5% 75%;
+  }
+  66% {
+    background-size: 50.5% 55%, 50.5% 55%, 50.5% 55%, 50.5% 55%, 50.5% 80%,
+      50.5% 80%, 50.5% 80%, 50.5% 80%;
+  }
+  100% {
+    background-size: 50.5% 90%, 50.5% 90%, 50.5% 90%, 50.5% 90%, 50.5% 95%,
+      50.5% 95%, 50.5% 95%, 50.5% 95%;
+  }
 }
 
 h1 {
@@ -62,7 +65,8 @@ textarea {
 }
 @media (max-width: 430px) {
   .input-area {
-    width: 97vw !important;
+    width: 95dvw !important;
+    overflow: hidden;
   }
 }
 .main-container {
@@ -73,11 +77,14 @@ textarea {
   justify-content: center;
 }
 .input-container {
-  position: relative;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
+  bottom: 15px;
 }
 .input-area {
+  background-color: transparent;
   border: none;
   width: 400px;
   height: 32px;
@@ -105,7 +112,61 @@ textarea {
   font-size: 16px;
   animation: fadeIntxt 2s ease forwards;
   animation-delay: 0.85s;
-  z-index: 1;
+}
+.loading {
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background-color: rgba(96, 96, 96, 0.479);
+  outline: 1px solid transparent;
+  animation: load infinite 1.65s ease-in-out;
+  transition: opacity 0.6s ease;
+}
+.typewriter-container {
+  display: flex;
+  align-items: center;
+}
+
+.typewriter-text {
+  font-size: 1.2em;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: rgba(96, 96, 96, 0.7);
+  animation: fadeInOut 0.8s infinite alternate ease-in-out;
+}
+
+/* Circle fade in and out animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation for each character */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+@keyframes load {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
 }
 @keyframes fadeIntxt {
   to {
@@ -130,9 +191,11 @@ textarea {
   overflow: auto;
   transition: all 1s ease;
   display: flex;
-  width: 100%;
+  width: 100dvw;
   flex-direction: column;
   position: relative;
+  row-gap: 35px;
+
   align-items: end;
   justify-content: start;
   flex-flow: column;
@@ -143,14 +206,19 @@ textarea {
   width: 100%;
   min-height: 500px;
   position: relative;
+  background-color: #c8c8c828;
 }
 .upcomingmsg {
+  -webkit-box-shadow: 7px 9px 58px -17px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 9px 58px -17px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 9px 58px -17px rgba(0, 0, 0, 0.75);
   width: 28px;
   height: 28px;
   background-color: rgba(255, 200, 47, 0.89);
-  border-radius: 10px; 
+  border-radius: 10px;
   position: absolute;
-  right: 2px;
+  z-index: -1;
+  right: 10px;
   animation: scalin 1s ease-out;
   transform-origin: right;
 }
@@ -162,6 +230,16 @@ textarea {
   align-items: center;
   justify-content: end;
 }
+.response-container {
+  margin: 15px;
+  display: flex;
+  column-gap: 5px;
+  animation: fadeInUp 0.75s ease-in;
+}
+.chatbot-icon {
+  width: 28px;
+  height: 28px;
+}
 @keyframes scalin {
   from {
     transform-origin: right;
@@ -170,7 +248,6 @@ textarea {
   to {
     transform: scaleX(1);
   }
-  
 }
 .yeschat {
   animation: higher 1.25s ease forwards;
@@ -187,11 +264,10 @@ textarea {
     transform: translateY(-35px);
     opacity: 0;
   }
-  
 }
 .animate-width {
   position: absolute;
-  top: 10px;
+  top: 45px;
   right: 10px;
   animation: widen 0.5s ease forwards;
 }
@@ -213,29 +289,29 @@ textarea {
   animation: fadeOutUP 0.5s ease forwards;
 }
 .rotate {
-    animation: rotate 0.55s ease forwards; /* Rotation animation */
+  animation: rotate 0.55s ease forwards; /* Rotation animation */
 }
 .header {
-    animation: fadeInDown 0.5s ease forwards; /* Header animation */
+  animation: fadeInDown 0.5s ease forwards; /* Header animation */
 }
 .textbox {
-    animation: fadeInUp 0.5s ease forwards; /* Textbox animation */
+  animation: fadeInUp 0.5s ease forwards; /* Textbox animation */
 }
 @keyframes animateMsg {
- to {
-  top: 10px;
-  right: 10px;
-  transform: scaleX(1);
- }
+  to {
+    top: 100px;
+    right: 10px;
+    transform: scaleX(1);
+  }
 }
 @keyframes higher {
   from {
     height: 28px;
   }
   to {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
+    width: 100dvw;
+    height: 100dvh;
+    max-height: 100dvh;
   }
 }
 @keyframes widen {
@@ -249,38 +325,36 @@ textarea {
 
 @keyframes widerInput {
   to {
-    width: 100vw;
-    bottom: 10px;
-    margin-right: 10px;
+    width: 95dvw;
   }
 }
 @keyframes fadeOutUP {
-    0% {
-        opacity: 1;
-        transform: translateY(0); /* Start slightly below */
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-38px); /* End at original position */
-        display: none;
-    }
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* Start slightly below */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-38px); /* End at original position */
+    display: none;
+  }
 }
 @keyframes rotate {
-    from {
-        transform: rotate(0deg); /* Start rotation */
-    }
-    to {
-        transform: rotate(720deg); /* Complete rotation */
-    }
+  from {
+    transform: rotate(0deg); /* Start rotation */
+  }
+  to {
+    transform: rotate(720deg); /* Complete rotation */
+  }
 }
 @keyframes fadeout {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden; /* Optional to prevent click events */
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden; /* Optional to prevent click events */
+  }
 }
 
 @keyframes zoomin {
@@ -294,35 +368,35 @@ textarea {
   }
 }
 @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px); /* Start slightly above */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End at original position */
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
 }
 
 @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(10px); /* Start slightly below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End at original position */
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(10px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
 }
 .squircle svg {
   width: 30px;
   fill: white; /* Change color of the arrow */
 }
 body {
-  display:grid;
-  place-content:center;
-  min-height:100dvh;
-  margin:0;
-  background:white;
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  margin: 0;
+  background: white;
   overflow: hidden;
 }
